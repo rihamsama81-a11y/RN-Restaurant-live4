@@ -1,0 +1,2895 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My restaurant</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <div class="cart-icon" onclick="openCartModal()">
+          <i class="fas fa-shopping-cart"></i>
+          <span id="cart-count">0</span>
+        </div>
+    </head>
+    <body>
+        <div id="Home-background-color">
+        <nav class="navbar">
+        <h2>RN Website</h2>
+        <button class="menu-btn" onclick="toggleMenu()">
+         <i class="fas fa-bars"></i>
+        </button>
+        <div class="nav-links">
+        <a href="#Home">Home</a>
+        <a href="#cards">Menu</a>
+        <a href="#about">About</a>
+        <a href="#BookATable">Book table</a>
+        </div>
+        <div class="nav-right">
+        <a href="#" class="nav-icon" onclick="openUserModal()"><i class="fas fa-user"></i></a>
+        <a href="#" class="nav-icon" onclick="openCartModal()"><i class="fas fa-shopping-cart"></i></a>
+        <a href="javascript:void(0)" class="nav-icon" onclick="toggleSearchBar()"><i class="fas fa-search"></i></a>
+        <a href="#" class="order-btn" onclick="scrollToBookTable()">Order Online</a>
+        </div>
+        </nav>
+<div id="searchBox" style="display: none;">
+  <form onsubmit="event.preventDefault(); searchFood();">
+    <input 
+      type="text" 
+      id="searchInput" 
+      placeholder="Search for food..." 
+      oninput="searchFood()" 
+      onkeyup="searchFood()"
+    >
+  </form>
+</div>
+
+<p id="noResultsMsg" style="display: none;">
+  No meals found matching your search!
+</p>
+        <section id="Home">
+        <img src="RN Home.jpeg" alt="RN Home">
+          <div class="Home-text">
+          <h1>RN Restaurant</h1>
+          <p>We offer the most delicious fresh meals using high-quality ingrediants.
+          Our goal is to provide delicious food and excellent service in a comfortable 
+          atmosphere suitable for families and friends. </p>
+          <ul class="list">
+            <li>Pizza</li><br>                            
+            <li>Burger</li><br>
+            <li>Fried chicken & Sandwich</li><br>
+            <li>Main Meals</li><br>
+            <li>Sushi & Noodles</li><br>
+            <li>Cakes,crepes & Pastries</li><br>
+            <li>drinks</li><br>
+            <li>Milk Shake & Coffee</li><br>
+            <li>Ice Cream</li>
+          </ul>
+          <button class="view-menu-btn" onclick="scrollToGallery()">View Menu</button>
+          </div>
+        </section>
+        <section id="gallery" class="gallery-section">
+        <h2 class="gallery-title">Our Gallery</h2>
+          <div class="gallery-container">
+             <div class="gallery-item">
+             <img src="Pizza-Gallery.jpeg"  alt="Pizza-Gallery">
+               <div class="gallery-overlay">
+                <h3>Cheese Pizza</h3>
+                <button class="gallery-btn" onclick="scrollToPizza()">Order Now</button>
+               </div> 
+             </div>
+             <div class="gallery-item">
+             <img src="Burger-Gallery.jpeg"  alt="Burger-Gallery">
+               <div class="gallery-overlay">
+                <h3>Cheese Burger</h3>
+                <button class="gallery-btn" onclick="scrollToBurger()">Order Now</button>
+               </div> 
+             </div>
+             <div class="gallery-item">
+             <img src="Fried Chicken-Gallery.jpeg"  alt="Fried Chicken-Gallery">
+               <div class="gallery-overlay">
+                <h3>Fried Chicken & Sandwich</h3>
+                <button class="gallery-btn" onclick="scrollToFriedChicken()">Order Now</button>
+               </div> 
+             </div>
+            <div class="gallery-item">
+             <img src="Pasta-Gallery.jpeg"  alt="Pasta-Gallery">
+               <div class="gallery-overlay">
+                <h3>Main Meals</h3>
+                <button class="gallery-btn" onclick="scrollToPasta()">Order Now</button>
+               </div> 
+             </div>
+            <div class="gallery-item">
+             <img src="Sushi-Gallery.jpeg"  alt="Sushi-Gallery">
+               <div class="gallery-overlay">
+                <h3>Sushi & Noodles</h3>
+                <button class="gallery-btn" onclick="scrollToSuchi()">Order Now</button>
+               </div> 
+             </div>
+            <div class="gallery-item">
+             <img src="Cakes-Gallery.jpeg"  alt="Cakes-Gallery">
+               <div class="gallery-overlay">
+                <h3>Cakes,crepes & Pastries</h3>
+                <button class="gallery-btn" onclick="scrollToCakes()">Order Now</button>
+               </div> 
+             </div>
+            <div class="gallery-item">
+             <img src="Drinks-Gallery.jpeg"  alt="Drinks-Gallery">
+               <div class="gallery-overlay">
+                <h3>Fresh Drinks</h3>
+                <button class="gallery-btn" onclick="scrollToDrinks()">Order Now</button>
+               </div> 
+             </div>
+            <div class="gallery-item">
+             <img src="Coffee-Gallery.jpeg"  alt="Coffee-Gallery">
+               <div class="gallery-overlay">
+                <h3>Milk Shake & Coffee</h3>
+                <button class="gallery-btn" onclick="scrollToCoffee()">Order Now</button>
+               </div> 
+             </div>
+            <div class="gallery-item">
+             <img src="Ice Cream-Gallery.jpeg"  alt="Ice Cream-Gallery">
+               <div class="gallery-overlay">
+                <h3>Ice Cream</h3>
+                <button class="gallery-btn" onclick="scrollToIceCream()">Order Now</button>
+               </div> 
+             </div>
+          </div>   
+        </section>
+        <section id="Rn-Pizza" class="banner">
+        <img src="Pizza.jpeg" alt="introduction">
+        <div id="banner-text">
+        <h1 class="Pizza">RN Pizza</h1>
+        <p>We specialize in serving fresh Italian Pizza<br>
+           We use original recipes and carefully selected ingrediants
+           to provide a uniqe experience for every visitor.
+        </p>
+        <button class="Home Button" onclick="scrollToPizzaMenu()">Order Now</button>
+        <p id="Order"></p>
+        </div>
+        </section>
+        <section id="cards" class="cards-container">
+                                      <div class="PizzaMenu" id="PizzaMenu">
+        <h5>Our Menu</h5>
+        <div class="menu-container">
+        <div class="card">
+            <div class="card-top">
+        <img src="Pepperoni Pizza.jpeg" class="food-img" alt="Pepperoni Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Pepperoni Pizza</h3>
+               <div class="price-and-cart">
+            <select class="size-select">
+            <option value="170" data-size="Small">Small: 170 L.E</option>
+            <option value="260" data-size="Medium">Medium: 260 L.E</option>
+            <option value="350" data-size="Large">Large: 350 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Seafood Ranch Pizza.jpeg" class="food-img" alt="Seafood Ranch Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Seafood Ranch Pizza</h3>
+               <div class="price-and-cart">
+            <select class="size-select">
+            <option value="230" data-size="Small">Small: 230 L.E</option>
+            <option value="345" data-size="Medium">Medium: 345 L.E</option>
+            <option value="450" data-size="Large">Large: 450 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Chicken Ranch Pizza.jpeg" class="food-img" alt="Chicken Ranch Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Ranch Pizza</h3>
+                 <div class="price-and-cart">
+            <select class="size-select">
+            <option value="190" data-size="Small">Small: 190 L.E</option>
+            <option value="285" data-size="Medium">Medium: 285 L.E</option>
+            <option value="380" data-size="Large">Large: 380 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                 </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Sausage Pizza.jpeg" class="food-img" alt="Sausage Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Sausage Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="175" data-size="Small">Small: 175 L.E</option>
+            <option value="265" data-size="Medium">Medium: 265 L.E</option>
+            <option value="355" data-size="Large">Large: 355 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Tuna Pizza.jpeg" class="food-img" alt="Tuna Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Tuna Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="190" data-size="Small">Small: 190 L.E</option>
+            <option value="285" data-size="Medium">Medium: 285 L.E</option>
+            <option value="380" data-size="Large">Large: 380 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                  </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Venice Pizza.jpeg" class="food-img" alt="Venice Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Venice Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="180" data-size="Small">Small: 180 L.E</option>
+            <option value="275" data-size="Medium">Medium: 275 L.E</option>
+            <option value="365" data-size="Large">Large: 365 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                  </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Meat Mix Pizza.jpeg" class="food-img" alt="Meat Mix Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Meat Mix Pizza</h3>
+                <div class="price-and-cart">
+            <select class="size-select">
+            <option value="220" data-size="Small">Small: 220 L.E</option>
+            <option value="330" data-size="Medium">Medium: 330 L.E</option>
+            <option value="430" data-size="Large">Large: 430 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+        </div>
+        </div>
+        </div> 
+        <div class="card">
+            <div class="card-top">
+        <img src="Margherita Pizza.jpeg" class="food-img" alt="Margherita Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Margherita Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="140" data-size="Small">Small: 140 L.E</option>
+            <option value="220" data-size="Medium">Medium: 220 L.E</option>
+            <option value="300" data-size="Large">Large: 300 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                  </div>
+        </div>
+        </div>
+        </div> 
+        <div class="card">
+            <div class="card-top">
+        <img src="Chicken Barbecue Pizza.jpeg" class="food-img" alt="Chicken Barbecue Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Barbecue Pizza</h3>
+                <div class="price-and-cart">
+            <select class="size-select">
+            <option value="195" data-size="Small">Small: 195 L.E</option>
+            <option value="295" data-size="Medium">Medium: 295 L.E</option>
+            <option value="390" data-size="Large">Large: 390 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Italian Smokey Zinger Pizza.jpeg" class="food-img" alt="Italian Smokey Zinger Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Italian Smokey Zinger Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="200" data-size="Small">Small: 200 L.E</option>
+            <option value="300" data-size="Medium">Medium: 300 L.E</option>
+            <option value="395" data-size="Large">Large: 395 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Italian Shrimp Crispy Pizza.jpeg" class="food-img" alt="Italian Shrimp Crispy Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Italian Shrimp Crispy Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="240" data-size="Small">Small: 240 L.E</option>
+            <option value="360" data-size="Medium">Medium: 360 L.E</option>
+            <option value="470" data-size="Large">Large: 470 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Italian Quattro Formaggi  Pizza.jpeg" class="food-img" alt="Italian Quattro Formaggi Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Italian Quattro Formaggi Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="225" data-size="Small">Small: 225 L.E</option>
+            <option value="340" data-size="Medium">Medium: 340 L.E</option>
+            <option value="445" data-size="Large">Large: 445 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Buffalo Ranch Chicken.jpeg" class="food-img" alt="Buffalo Ranch Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Buffalo Ranch Chicken</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="115" data-size="Small">Small: 115 L.E</option>
+            <option value="195" data-size="Medium">Medium: 195 L.E</option>
+            <option value="275" data-size="Large">Large: 275 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div>
+        <div class="card">
+            <div class="card-top">
+        <img src="Hot paprika Pizza.jpeg" class="food-img" alt="Hot paprika Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Hot paprika Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="100" data-size="Small">Small: 100 L.E</option>
+            <option value="180" data-size="Medium">Medium: 180 L.E</option>
+            <option value="260" data-size="Large">Large: 260 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div>  
+                <div class="card">
+            <div class="card-top">
+        <img src="Italian Milanese Pizza.jpeg" class="food-img" alt="Italian Milanese Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Italian Milanese Pizza</h3>
+                  <div class="price-and-cart">
+            <select class="size-select">
+            <option value="120" data-size="Small">Small: 120 L.E</option>
+            <option value="200" data-size="Medium">Medium: 200 L.E</option>
+            <option value="280" data-size="Large">Large: 280 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                   </div>
+        </div>
+        </div>
+        </div> 
+        <div class="card">
+            <div class="card-top">
+        <img src="Tuna Ranch Pizza.jpeg" class="food-img" alt="Tuna Ranch Pizza">
+            </div>
+        <div class="card-body">
+        <h3>Tuna Ranch Pizza</h3>
+                <div class="price-and-cart">
+            <select class="size-select">
+            <option value="135" data-size="Small">Small: 135 L.E</option>
+            <option value="215" data-size="Medium">Medium: 215 L.E</option>
+            <option value="295" data-size="Large">Large: 295 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+                 </div>
+        </div>
+        </div>
+        </div>   
+        </div>
+                                                       </div>
+        </section>
+        <section id="Burger-Home" class="Burger">
+        <img src="Burger.jpeg" alt="Burger Home">
+          <div class="Burger-Home-text">
+          <h1>RN Burger</h1>
+          <p>We specialize in serving fresh Hammer Ranch Beef Burger & Hammer Ranch Chicken Burger, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToBurgerMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="BurgerMenu" id="BurgerMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                 <div class="card">
+            <div class="card-top">
+        <img src="Classic Beef.jpeg" class="food-img" alt="Classic Beef">
+            </div>
+        <div class="card-body">
+        <h3>Classic Beef<br> Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="100" data-size="Single">Single: 100 L.E</option>
+            <option value="170" data-size="Double">Double: 170 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Mozzarella Beef.jpeg" class="food-img" alt="Mozzarella Beef">
+            </div>
+        <div class="card-body">
+        <h3>Mozzarella Beef Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="120" data-size="Single">Single: 120 L.E</option>
+            <option value="200" data-size="Double">Double: 200 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Mushroom Beef.jpeg" class="food-img" alt="Mushroom Beef">
+            </div>
+        <div class="card-body">
+        <h3>Mushroom Beef Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="115" data-size="Single">Single: 115 L.E</option>
+            <option value="195" data-size="Double">Double: 195 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Onion Beef.jpeg" class="food-img" alt="Onion Beef">
+            </div>
+        <div class="card-body">
+        <h3>Onion Beef<br> Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="110" data-size="Single">Single: 110 L.E</option>
+            <option value="190" data-size="Double">Double: 190 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="Barbecue Beef.jpeg" class="food-img" alt="Barbecue Beef">
+            </div>
+        <div class="card-body">
+        <h3>Barbecue Beef<br> Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="150" data-size="Single">Single: 150 L.E</option>
+            <option value="220" data-size="Double">Double: 220 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Cheese Beef.jpeg" class="food-img" alt="Cheese Beef">
+            </div>
+        <div class="card-body">
+        <h3>Cheese Beef<br> Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="140" data-size="Single">Single: 140 L.E</option>
+            <option value="210" data-size="Double">Double: 210 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Hammer Ranch Beef.jpeg" class="food-img" alt="Hammer Ranch Beef">
+            </div>
+        <div class="card-body">
+        <h3>Hammer Ranch Beef Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="190" data-size="Single">Single: 190 L.E</option>
+            <option value="270" data-size="Double">Double: 270 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="Big Box Beef.jpeg" class="food-img" alt="Big Box Beef">
+            </div>
+        <div class="card-body">
+        <h3>Big Box Beef<br> Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="220" data-size="Single">Single: 220 L.E</option>
+            <option value="300" data-size="Double">Double: 300 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Classic Chicken.jpeg" class="food-img" alt="Classic Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Classic Chicken Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="140" data-size="Single">Single: 140 L.E</option>
+            <option value="200" data-size="Double">Double: 200 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Mozzarella Chicken.jpeg" class="food-img" alt="Mozzarella Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Mozzarella Chicken Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="160" data-size="Single">Single: 160 L.E</option>
+            <option value="230" data-size="Double">Double: 230 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Mushroom Chicken.jpeg" class="food-img" alt="Mushroom Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Mushroom Chicken Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="150" data-size="Single">Single: 150 L.E</option>
+            <option value="220" data-size="Double">Double: 220 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Onion Chicken.jpeg" class="food-img" alt="Onion Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Onion Chicken Runch Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="145" data-size="Single">Single: 145 L.E</option>
+            <option value="215" data-size="Double">Double: 215 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                    <div class="card">
+            <div class="card-top">
+        <img src="Super Supreme.jpeg" class="food-img" alt="Super Supreme">
+            </div>
+        <div class="card-body">
+        <h3>Super Supreme<br> Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="170" data-size="Single">Single: 170 L.E</option>
+            <option value="250" data-size="Double">Double: 250 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Hammer Ranch Chicken.jpeg" class="food-img" alt="Hammer Ranch Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Hammer Ranch Chicken Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="190" data-size="Single">Single: 190 L.E</option>
+            <option value="270" data-size="Double">Double: 270 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Big Box Chicken.jpeg" class="food-img" alt="Big Box Chicken.jpeg">
+            </div>
+        <div class="card-body">
+        <h3>Big Box Chicken Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="215" data-size="Single">Single: 215 L.E</option>
+            <option value="295" data-size="Double">Double: 295 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Filto Bay.jpeg" class="food-img" alt="Filto Bay">
+            </div>
+        <div class="card-body">
+        <h3>Filto Bay Runch Burger</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="145" data-size="Single">Single: 145 L.E</option>
+            <option value="215" data-size="Double">Double: 215 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                                                            </div>
+        </div>
+                                                </div>
+        </section>
+                        <section id="Fried-Chicken-Home" class="FriedChicken">
+        <img src="Fried Chicken.jpeg" alt="Fried Chicken Home">
+          <div class="Fried-Chicken-Home-text">
+          <h1>RN Fried Chicken</h1>
+          <p>We specialize in serving fresh Korean Fried Chicken & Grilled Sausage Sandwich, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToFriedChickenMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="FriedChickenMenu" id="FriedChickenMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                 <div class="card">
+            <div class="card-top">
+        <img src="crispy fried chicken.jpeg" class="food-img" alt="crispy fried chicken">
+            </div>
+        <div class="card-body">
+        <h3>Crispy Fried Chicken</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="165" data-size="3 pieces">3 pieces: 165 L.E</option>
+            <option value="255" data-size="5 pieces">5 pieces: 255 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="BBQ chicken wings.jpeg" class="food-img" alt="BBQ chicken wings">
+            </div>
+        <div class="card-body">
+        <h3>BBQ Chicken Wings</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="170" data-size="3 pieces">3 pieces: 170 L.E</option>
+            <option value="260" data-size="5 pieces">5 pieces: 260 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Korean Fried Chicken.jpeg" class="food-img" alt="Korean Fried Chicken">
+            </div>
+        <div class="card-body">
+        <h3>Korean Fried Chicken</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="180" data-size="3 pieces">3 pieces: 180 L.E</option>
+            <option value="270" data-size="5 pieces">5 pieces: 270 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="beef shawarma wrap.jpeg" class="food-img" alt="beef shawarma wrap">
+            </div>
+        <div class="card-body">
+        <h3>Beef Shawarma Wrap</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="170" data-size="Small">Small: 170 L.E</option>
+            <option value="250" data-size="Large">Large: 250 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="cheesy shredded chicken burrito.jpeg" class="food-img" alt="cheesy shredded chicken burrito.jpeg">
+            </div>
+        <div class="card-body">
+        <h3>Cheesy Shredded Chicken Burrito</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="185" data-size="Small">Small: 185 L.E</option>
+            <option value="275" data-size="Large">Large: 275 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="grilled chicken sandwich.jpeg" class="food-img" alt="grilled chicken sandwich">
+            </div>
+        <div class="card-body">
+        <h3>Grilled Chicken Sandwich</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="175" data-size="Small">Small: 175 L.E</option>
+            <option value="255" data-size="Large">Large: 255 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="grilled bacon wrapped hot dogs.jpeg" class="food-img" alt="grilled bacon wrapped hot dogs">
+            </div>
+        <div class="card-body">
+        <h3>Grilled Bacon Wrapped Hot Dogs</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="170" data-size="Small">Small: 170 L.E</option>
+            <option value="250" data-size="Large">Large: 250 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="grilled sausage sandwich.jpeg" class="food-img" alt="grilled sausage sandwich">
+            </div>
+        <div class="card-body">
+        <h3>Grilled Sausage Sandwich</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="180" data-size="Small">Small: 180 L.E</option>
+            <option value="260" data-size="Large">Large: 260 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="turkey deli sandwich.jpeg" class="food-img" alt="turkey deli sandwich">
+            </div>
+        <div class="card-body">
+        <h3>Turkey Deli Sandwich</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="165" data-size="Small">Small: 165 L.E</option>
+            <option value="245" data-size="Large">Large: 245 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="cheesy chicken crepes.jpeg" class="food-img" alt="cheesy chicken crepes">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Crepes</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="195" data-size="Small">Small: 195 L.E</option>
+            <option value="285" data-size="Large">Large: 285 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chicken tikka rolls.jpeg" class="food-img" alt="chicken tikka rolls">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Tikka Rolls</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="200" data-size="Small">Small: 200 L.E</option>
+            <option value="290" data-size="Large">Large: 290 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Reuben sandwich.jpeg" class="food-img" alt="Reuben sandwich">
+            </div>
+        <div class="card-body">
+        <h3>Reuben Sandwich</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="190" data-size="Small">Small: 190 L.E</option>
+            <option value="280" data-size="Large">Large: 280 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                    <div class="card">
+            <div class="card-top">
+        <img src="Chicken Cordon Bleu.jpeg" class="food-img" alt="Chicken Cordon Bleu">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Cordon Bleu</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="210" data-size="Small">Small: 210 L.E</option>
+            <option value="300" data-size="Large">Large: 300 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="grilled beef burrito.jpeg" class="food-img" alt="grilled beef burrito">
+            </div>
+        <div class="card-body">
+        <h3>Grilled Beef Burrito</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="195" data-size="Small">Small: 195 L.E</option>
+            <option value="285" data-size="Large">Large: 285 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="grilled chicken burrito.jpeg" class="food-img" alt="grilled chicken burrito">
+            </div>
+        <div class="card-body">
+        <h3>Grilled Chicken Burrito</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="200" data-size="Small">Small: 200 L.E</option>
+            <option value="290" data-size="Large">Large: 290 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>  
+                <div class="card">
+            <div class="card-top">
+        <img src="ground beef tacos.jpeg" class="food-img" alt="ground beef tacos">
+            </div>
+        <div class="card-body">
+        <h3>Ground Beef Tacos</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="180" data-size="Small">Small: 180 L.E</option>
+            <option value="270" data-size="Large">Large: 270 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                                                            </div>
+        </div>
+                                        </div>
+        </section>
+                <section id="Main-Meal-Home" class="Pasta">
+        <img src="Main-Meal.jpeg" alt="Main-Meal Home">
+          <div class="Main-Meal-Home-text">
+          <h1>RN Main Meals</h1>
+          <p>We specialize in serving fresh Salmon Fillet With Creamy Garlic Butter Sauce, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToMainMealMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="MainMealMenu" id="MainMealMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                 <div class="card">
+            <div class="card-top">
+        <img src="Grilled chicken breasts.jpeg" class="food-img" alt="Grilled chicken breasts">
+            </div>
+        <div class="card-body">
+        <h3>Grilled Chicken Breasts</h3>
+               <div class="price-and-cart2">
+        <p>220 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Grilled Chicken Breasts', 220)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="Spicy Garlic Beef Fettuccine.jpeg" class="food-img" alt="Spicy Garlic Beef Fettuccine">
+            </div>
+        <div class="card-body">
+        <h3>Spicy Garlic Beef Fettuccine</h3>
+               <div class="price-and-cart2">
+        <p>205 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Spicy Garlic Beef Fettuccine', 205)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Spaghetti With Meatballs.jpeg" class="food-img" alt="Spaghetti With Meatballs">
+            </div>
+        <div class="card-body">
+        <h3>Spaghetti With Meatballs</h3>
+               <div class="price-and-cart2">
+        <p>175 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Spaghetti With Meatballs', 175)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Creamy Shrimp Alfredo pasta.jpeg" class="food-img" alt="Creamy Shrimp Alfredo pasta">
+            </div>
+        <div class="card-body">
+        <h3>Creamy Shrimp Alfredo Pasta</h3>
+               <div class="price-and-cart2">
+        <p>230 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Creamy Shrimp Alfredo Pasta', 230)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="chicken dinner bowl.jpeg" class="food-img" alt="chicken dinner bowl">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Dinner Bowl</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chicken Dinner Bowl', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="cheesy beef quesadilla.jpeg" class="food-img" alt="cheesy beef quesadilla">
+            </div>
+        <div class="card-body">
+        <h3>Cheesy Beef Quesadilla</h3>
+               <div class="price-and-cart2">
+        <p>180 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Cheesy Beef Quesadilla', 180)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Steak Beef.jpeg" class="food-img" alt="Steak Beef">
+            </div>
+        <div class="card-body">
+        <h3>Steak Beef</h3>
+               <div class="price-and-cart2">
+        <p>295 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Steak Beef', 295)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="creamy sausage Pasta.jpeg" class="food-img" alt="creamy sausage Pasta">
+            </div>
+        <div class="card-body">
+        <h3>Creamy Sausage Pasta</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Creamy Sausage Pasta', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Sticky Honey Garlic Chicken With Spaghetti.jpeg" class="food-img" alt="Sticky Honey Garlic Chicken With Spaghetti">
+            </div>
+        <div class="card-body">
+        <h3>Sticky Honey Garlic Chicken With Spaghetti</h3>
+               <div class="price-and-cart2">
+        <p>190 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Sticky Honey Garlic Chicken With Spaghetti', 190)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="creamy chicken penne pasta.jpeg" class="food-img" alt="creamy chicken penne pasta">
+            </div>
+        <div class="card-body">
+        <h3>Creamy Chicken Penne Pasta With Cheese Sauce</h3>
+               <div class="price-and-cart2">
+        <p>180 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Creamy Chicken Penne Pasta With Cheese Sauce', 180)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="salmon fillet With creamy garlic butter sauce.jpeg" class="food-img" alt="salmon fillet With creamy garlic butter sauce">
+            </div>
+        <div class="card-body">
+        <h3>Salmon Fillet With Creamy Garlic Butter Sauce</h3>
+               <div class="price-and-cart2">
+        <p>275 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Salmon Fillet With Creamy Garlic Butter Sauce', 275)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Chicken Teriyaki.jpeg" class="food-img" alt="Chicken Teriyaki">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Teriyaki Noodles With Sweet Savory Sauce</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chicken Teriyaki Noodles With Sweet Savory Sauce', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="beef lasagna.jpeg" class="food-img" alt="beef lasagna">
+            </div>
+        <div class="card-body">
+        <h3>Beef Lasagna</h3>
+               <div class="price-and-cart2">
+        <p>180 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Beef Lasagna', 180)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="green pasta.jpeg" class="food-img" alt="green pasta">
+            </div>
+        <div class="card-body">
+        <h3>Green Pasta</h3>
+               <div class="price-and-cart2">
+        <p>155 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Green Pasta', 155)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                    <div class="card">
+            <div class="card-top">
+        <img src="basmati rice.jpeg" class="food-img" alt="basmati rice">
+            </div>
+        <div class="card-body">
+        <h3>Basmati Rice</h3>
+               <div class="price-and-cart2">
+        <p>65 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Basmati Rice', 65)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Mexican Red Rice.jpeg" class="food-img" alt="Mexican Red Rice">
+            </div>
+        <div class="card-body">
+        <h3>Mexican Red Rice</h3>
+               <div class="price-and-cart2">
+        <p>75 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Mexican Red Rice', 75)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                                                            </div>
+        </div>
+                                  </div>
+        </section>
+                <section id="Suchi-Home" class="Suchi">
+        <img src="Suchi Home.jpeg" alt="Suchi-Home">
+          <div class="Suchi-Home-text">
+          <h1>RN Suchi & Noodles</h1>
+          <p>We specialize in serving fresh , and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToSuchiMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="SuchiMenu" id="SuchiMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                <div class="card">
+            <div class="card-top">
+        <img src="California roll.jpeg" class="food-img" alt="California roll">
+            </div>
+        <div class="card-body">
+        <h3>California Roll</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('California Roll', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Kyoto Roll.jpeg" class="food-img" alt="Kyoto Roll">
+            </div>
+        <div class="card-body">
+        <h3>Kyoto Roll</h3>
+               <div class="price-and-cart2">
+        <p>205 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Kyoto Roll', 205)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Kaito Roll.jpeg" class="food-img" alt="Kaito Roll">
+            </div>
+        <div class="card-body">
+        <h3>Kaito Roll</h3>
+               <div class="price-and-cart2">
+        <p>215 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Kaito Roll', 215)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="salmon avocado roll.jpeg" class="food-img" alt="salmon avocado roll">
+            </div>
+        <div class="card-body">
+        <h3>Salmon Avocado Roll</h3>
+               <div class="price-and-cart2">
+        <p>225 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Salmon Avocado Roll', 225)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                 <div class="card">
+            <div class="card-top">
+        <img src="Philadelphia rolls.jpeg" class="food-img" alt="Philadelphia rolls">
+            </div>
+        <div class="card-body">
+        <h3>Philadelphia Rolls</h3>
+               <div class="price-and-cart2">
+        <p>235 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Philadelphia Rolls', 235)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Salmon Trio Roll.jpeg" class="food-img" alt="Salmon Trio Roll">
+            </div>
+        <div class="card-body">
+        <h3>Salmon Trio Roll</h3>
+               <div class="price-and-cart2">
+        <p>255 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Salmon Trio Roll', 255)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Uramaki Rolls.jpeg" class="food-img" alt="Uramaki Rolls">
+            </div>
+        <div class="card-body">
+        <h3>Uramaki Rolls</h3>
+               <div class="price-and-cart2">
+        <p>210 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Uramaki Rolls', 210)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="shrimp tempura sushi roll.jpeg" class="food-img" alt="shrimp tempura sushi roll">
+            </div>
+        <div class="card-body">
+        <h3>Shrimp Tempura Sushi</h3>
+               <div class="price-and-cart2">
+        <p>245 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Shrimp Tempura Sushi', 245)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Jjajang Tteokbokki.jpeg" class="food-img" alt="Jjajang Tteokbokki">
+            </div>
+        <div class="card-body">
+        <h3>Jjajang Tteokbokki</h3>
+               <div class="price-and-cart2">
+        <p>175 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Jjajang Tteokbokki', 175)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Dumplings.jpeg" class="food-img" alt="Dumplings">
+            </div>
+        <div class="card-body">
+        <h3>Dumplings</h3>
+               <div class="price-and-cart2">
+        <p>145 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Dumplings', 145)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Chili Garlic Noodles.jpeg" class="food-img" alt="Chili Garlic Noodles">
+            </div>
+        <div class="card-body">
+        <h3>Chili Garlic Noodles</h3>
+               <div class="price-and-cart2">
+        <p>155 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chili Garlic Noodles', 155)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Chicken Chow Mein.jpeg" class="food-img" alt="Chicken Chow Mein">
+            </div>
+        <div class="card-body">
+        <h3>Chicken Chow Mein</h3>
+               <div class="price-and-cart2">
+        <p>170 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chicken Chow Mein', 170)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                        <div class="card">
+            <div class="card-top">
+        <img src="Pad Thai.jpeg" class="food-img" alt="Pad Thai">
+            </div>
+        <div class="card-body">
+        <h3>Pad Thai</h3>
+               <div class="price-and-cart2">
+        <p>205 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Pad Thai', 205)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Spicy Peanut Noodles.jpeg" class="food-img" alt="Spicy Peanut Noodles">
+            </div>
+        <div class="card-body">
+        <h3>Spicy Peanut Noodles</h3>
+               <div class="price-and-cart2">
+        <p>165 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Spicy Peanut Noodles', 165)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                    <div class="card">
+            <div class="card-top">
+        <img src="Beef Ramen.jpeg" class="food-img" alt="Beef Ramen">
+            </div>
+        <div class="card-body">
+        <h3>Beef Ramen</h3>
+               <div class="price-and-cart2">
+        <p>220 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Beef Ramen', 220)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Vegetable Lo Mein.jpeg" class="food-img" alt="Vegetable Lo Mein">
+            </div>
+        <div class="card-body">
+        <h3>Vegetable Lo Mein</h3>
+               <div class="price-and-cart2">
+        <p>155 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Vegetable Lo Mein', 155)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+ 
+                                                            </div>
+        </div>
+                                 </div>
+        </section>
+                        <section id="cakes-pastries-Home" class="Cakes">
+        <img src="cakes-pastries-Home.jpeg" alt="cakes-pastries-Home">
+          <div class="cakes-pastries-Home-text">
+          <h1>RN Cakes & Pastries</h1>
+          <p>We specialize in serving fresh Blueberry Vanilla Cupcake, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToCakesMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="CakesMenu" id="CakesMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate fudge cake.jpeg" class="food-img" alt="chocolate fudge cake">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Fudge Cake</h3>
+               <div class="price-and-cart2">
+        <p>170 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Fudge Cake', 170)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate donut.jpeg" class="food-img" alt="chocolate donut">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Donut</h3>
+               <div class="price-and-cart2">
+        <p>75 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Donut', 75)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+              <div class="card">
+            <div class="card-top">
+        <img src="chocolate-drizzled croissant.jpeg" class="food-img" alt="chocolate-drizzled croissant">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Croissant</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Croissant', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="chocolate chip muffins.jpeg" class="food-img" alt="chocolate chip muffins">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Chip Muffins</h3>
+               <div class="price-and-cart2">
+        <p>85 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Chip Muffins', 85)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                 <div class="card">
+            <div class="card-top">
+        <img src="cinnamon sugar.jpeg" class="food-img" alt="cinnamon sugar">
+            </div>
+        <div class="card-body">
+        <h3>Cinnamon Sugar</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Cinnamon Sugar', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="French macarons.jpeg" class="food-img" alt="French macarons">
+            </div>
+        <div class="card-body">
+        <h3>French Macarons</h3>
+               <div class="price-and-cart2">
+        <p>160 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('French Macarons', 160)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Strawberry donut.jpeg" class="food-img" alt="Strawberry donut">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Donut</h3>
+               <div class="price-and-cart2">
+        <p>75 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Strawberry Donut', 75)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="Oreo cupcake.jpeg" class="food-img" alt="Oreo cupcake">
+            </div>
+        <div class="card-body">
+        <h3>Oreo Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>90 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Oreo Cupcake', 90)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Red Berry Cupcake.jpeg" class="food-img" alt="Red Berry Cupcake">
+            </div>
+        <div class="card-body">
+        <h3>Redberry velvet Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Redberry velvet Cupcake', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="blueberry vanilla cheesecake.jpeg" class="food-img" alt="blueberry vanilla cheesecake">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry Vanilla Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blueberry Vanilla Cupcake', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="S'mores cupcakes.jpeg" class="food-img" alt="S'mores cupcakes">
+            </div>
+        <div class="card-body">
+        <h3>S'mores Chocolate Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>105 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('S mores Chocolate Cupcake', 105)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate berry cupcake.jpeg" class="food-img" alt="chocolate berry cupcake">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Berry Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>100 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Berry Cupcake', 100)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                        <div class="card">
+            <div class="card-top">
+        <img src="red velvet cupcake.jpeg" class="food-img" alt="red velvet cupcake">
+            </div>
+        <div class="card-body">
+        <h3>Red Velvet Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Red Velvet Cupcake', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="lemon cupcake.jpeg" class="food-img" alt="lemon cupcake">
+            </div>
+        <div class="card-body">
+        <h3>Lemon Cupcake</h3>
+               <div class="price-and-cart2">
+        <p>90 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Lemon Cupcake', 90)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                    <div class="card">
+            <div class="card-top">
+        <img src="New York cheesecake.jpeg" class="food-img" alt="New York cheesecake">
+            </div>
+        <div class="card-body">
+        <h3>New York Cheesecake</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('New York Cheesecake', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="kiwi cheesecake.jpeg" class="food-img" alt="kiwi cheesecake">
+            </div>
+        <div class="card-body">
+        <h3>Kiwi Cheesecake</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Kiwi Cheesecake', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Blackberry White Chocolate Mousse Cake.jpeg" class="food-img" alt="Blackberry White Chocolate Mousse Cake">
+            </div>
+        <div class="card-body">
+        <h3>Blackberry White Chocolate Mousse </h3>
+               <div class="price-and-cart2">
+        <p>210 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blackberry White Chocolate Mousse', 210)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="strawberry cheesecake.jpeg" class="food-img" alt="strawberry cheesecake">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Cheesecake</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Strawberry Cheesecake', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Lotus Biscoff cheesecake.jpeg" class="food-img" alt="Lotus Biscoff cheesecake">
+            </div>
+        <div class="card-body">
+        <h3>Lotus Biscoff Cheesecake</h3>
+               <div class="price-and-cart2">
+        <p>200 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Lotus Biscoff Cheesecake', 200)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="Blueberry chocolate pancakes.jpeg" class="food-img" alt="Blueberry chocolate pancakes">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry Chocolate Pancakes</h3>
+               <div class="price-and-cart2">
+        <p>190 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blueberry Chocolate Pancakes', 190)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                 <div class="card">
+            <div class="card-top">
+        <img src="Caramel Drip Cheesecake.jpeg" class="food-img" alt="Caramel Drip Cheesecake">
+            </div>
+        <div class="card-body">
+        <h3>Caramel Drip Cheesecake</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Caramel Drip Cheesecake', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Blueberry , Strawberry chocolate crepe.jpeg" class="food-img" alt="Blueberry , Strawberry chocolate crepe">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry , Strawberry Chocolate Crepe</h3>
+               <div class="price-and-cart2">
+        <p>175 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blueberry , Strawberry Chocolate Crepe', 175)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="strawberry , Nutella crepe.jpeg" class="food-img" alt="strawberry , Nutella crepe">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry , Nutella Crepe</h3>
+               <div class="price-and-cart2">
+        <p>165 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Strawberry , Nutella Crepe', 165)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="strawberry waffle cake.jpeg" class="food-img" alt="strawberry waffle cake">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry , Vanilla Waffle Cake</h3>
+               <div class="price-and-cart2">
+        <p>190 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Strawberry , Vanilla Waffle Cake', 190 )"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="Blueberry , Strawberry Waffle cake.jpeg" class="food-img" alt="Blueberry , Strawberry Waffle cake">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry , Strawberry Waffle Cake</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blueberry , Strawberry Waffle Cake', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="strawberry eclairs.jpeg" class="food-img" alt="strawberry eclairs">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry , Vanilla Eclairs</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Strawberry , Vanilla Eclairs', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Chocolate crepe.jpeg" class="food-img" alt="Chocolate crepe">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate , Ice-cream Crepe</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate , Ice-cream Crepe', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Lotus Biscoff pancake.jpeg" class="food-img" alt="Lotus Biscoff pancake">
+            </div>
+        <div class="card-body">
+        <h3>Lotus Biscoff<br> Pancake</h3>
+               <div class="price-and-cart2">
+        <p>210 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Lotus Biscoff Pancake', 210 )"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                        <div class="card">
+            <div class="card-top">
+        <img src="banana , Nutella crepe.jpeg" class="food-img" alt="banana , Nutella crepe">
+            </div>
+        <div class="card-body">
+        <h3>Banana , Nutella Crepe</h3>
+               <div class="price-and-cart2">
+        <p>155 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Banana , Nutella Crepe', 155)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate chip cookies.jpeg" class="food-img" alt="chocolate chip cookies">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Cookies</h3>
+               <div class="price-and-cart2">
+        <p>70 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Cookies', 70)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                    <div class="card">
+            <div class="card-top">
+        <img src="cinnamon rolls.jpeg" class="food-img" alt="cinnamon rolls">
+            </div>
+        <div class="card-body">
+        <h3>Cinnamon Rolls</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Cinnamon Rolls', 95)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Lotus Biscoff donuts.jpeg" class="food-img" alt="Lotus Biscoff donuts">
+            </div>
+        <div class="card-body">
+        <h3>Lotus Biscoff Donuts</h3>
+               <div class="price-and-cart2">
+        <p>90 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Lotus Biscoff Donuts', 90)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+ 
+                                                            </div>
+        </div>
+                                    </div>
+        </section>
+                <section id="Drinks-Home" class="Drinks">
+        <img src="Drinks.jpeg" alt="Drinks Home">
+          <div class="Drinks-Home-text">
+          <h1>RN Drinks</h1>
+          <p>We specialize in serving fresh Strawberry Daiquiri Juice & Creamy Blueberry Smoothie, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToDrinksMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="DrinksMenu" id="DrinksMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                 <div class="card">
+            <div class="card-top">
+        <img src="strawberry daiquiri.jpeg" class="food-img" alt="strawberry daiquiri">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Daiquiri Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="95" data-size="Small">Small: 95 L.E</option>
+            <option value="165" data-size="Medium">Medium: 165 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="strawberry lemonade.jpeg" class="food-img" alt="strawberry lemonade">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Lemonade Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="85" data-size="Small">Small: 85 L.E</option>
+            <option value="155" data-size="Medium">Medium: 155 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="melon lemonade.jpeg" class="food-img" alt="melon lemonade">
+            </div>
+        <div class="card-body">
+        <h3>Fresh Melon Lemonade Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="80" data-size="Small">Small: 80 L.E</option>
+            <option value="150" data-size="Medium">Medium: 150 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Sparkling Pomegranate Refresherjpeg.jpeg" class="food-img" alt="Sparkling Pomegranate Refresherjpeg">
+            </div>
+        <div class="card-body">
+        <h3>Pomegranate Refresher Juice </h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="90" data-size="Small">Small: 90 L.E</option>
+            <option value="160" data-size="Medium">Medium: 160 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="Watermelon slushie.jpeg" class="food-img" alt="Watermelon slushie">
+            </div>
+        <div class="card-body">
+        <h3>Watermelon Slushie Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="85" data-size="Small">Small: 85 L.E</option>
+            <option value="155" data-size="Medium">Medium: 155 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="strawberry basil lemonade.jpeg" class="food-img" alt="strawberry basil lemonade">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Basil Lemonade</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="90" data-size="Small">Small: 90 L.E</option>
+            <option value="160" data-size="Medium">Medium: 160 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="mango Juice.jpeg" class="food-img" alt="mango juice">
+            </div>
+        <div class="card-body">
+        <h3>Fresh Mango Juice Refresher</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="75" data-size="Small">Small: 75 L.E</option>
+            <option value="140" data-size="Medium">Medium: 140 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="mango smoothie.jpeg" class="food-img" alt="mango smoothie">
+            </div>
+        <div class="card-body">
+        <h3>Fresh Mango Smoothie Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="110" data-size="Small">Small: 110 L.E</option>
+            <option value="180" data-size="Medium">Medium: 180 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="kiwi mint refresher.jpeg" class="food-img" alt="kiwi mint refresher">
+            </div>
+        <div class="card-body">
+        <h3>Fresh kiwi Mint Refresher</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="95" data-size="Small">Small: 95 L.E</option>
+            <option value="165" data-size="Medium">Medium: 165 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="orange-flavored iced tea.jpeg" class="food-img" alt="orange-flavored iced tea">
+            </div>
+        <div class="card-body">
+        <h3>Orange-Flavored Iced Tea</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="80" data-size="Small">Small: 80 L.E</option>
+            <option value="145" data-size="Medium">Medium: 145 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Tequila Sunrise.jpeg" class="food-img" alt="Tequila Sunrise">
+            </div>
+        <div class="card-body">
+        <h3> Fresh Tequila Sunrise Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="90" data-size="Small">Small: 90 L.E</option>
+            <option value="160" data-size="Medium">Medium: 160 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Strawberry Mojito.jpeg" class="food-img" alt="Strawberry Mojito">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Mojito Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="85" data-size="Small">Small: 85 L.E</option>
+            <option value="155" data-size="Medium">Medium: 155 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                    <div class="card">
+            <div class="card-top">
+        <img src="fruit cocktail parfait.jpeg" class="food-img" alt="fruit cocktail parfait">
+            </div>
+        <div class="card-body">
+        <h3>Fruit Cocktail Parfait</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="95" data-size="Small">Small: 95 L.E</option>
+            <option value="165" data-size="Medium">Medium: 165 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Bloody Mary cocktail.jpeg" class="food-img" alt="Bloody Mary cocktail">
+            </div>
+        <div class="card-body">
+        <h3>Bloody Mary Cocktail</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="90" data-size="Small">Small: 90 L.E</option>
+            <option value="160" data-size="Medium">Medium: 160 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="fresh lemon juice.jpeg" class="food-img" alt="fresh lemon juice">
+            </div>
+        <div class="card-body">
+        <h3>Fresh Lemon Juice</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="70" data-size="Small">Small: 70 L.E</option>
+            <option value="130" data-size="Medium">Medium: 130 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>  
+                <div class="card">
+            <div class="card-top">
+        <img src="creamy blueberry smoothie.jpeg" class="food-img" alt="creamy blueberry smoothie">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry Smoothie</h3>
+               <div class="price-and-cart2">
+            <select class="size-select">
+            <option value="100" data-size="Small">Small: 100 L.E</option>
+            <option value="170" data-size="Medium">Medium: 170 L.E</option>
+            </select>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addWithSizeToCart(this)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                                                            </div>
+        </div>
+                                 </div>
+        </section>
+                <section id="Coffee-Home" class="Coffee">
+        <img src="Coffee.jpeg" alt="CoffeeHome">
+          <div class="Coffee-Home-text">
+          <h1>RN Milk Shake & Coffee</h1>
+          <p>We specialize in serving fresh Mixed Berry Milkshake, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToCoffeeMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="CoffeeMenu" id="CoffeeMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                <div class="card">
+            <div class="card-top">
+        <img src="mixed berry milkshake.jpeg" class="food-img" alt="mixed berry milkshake">
+            </div>
+        <div class="card-body">
+        <h3>Mixed Berry Milkshake</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Mixed Berry Milkshake', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="freakshakes.jpeg" class="food-img" alt="freakshakes">
+            </div>
+        <div class="card-body">
+        <h3>Freakshakes</h3>
+               <div class="price-and-cart2">
+        <p>245 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Freakshakes', 245)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="fancy coffee drink.jpeg" class="food-img" alt="fancy coffee drink">
+            </div>
+        <div class="card-body">
+        <h3>Fancy Coffee Drink</h3>
+               <div class="price-and-cart2">
+        <p>135 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Fancy Coffee Drink', 135)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="hot chocolate.jpeg" class="food-img" alt="hot chocolate">
+            </div>
+        <div class="card-body">
+        <h3>Hot Chocolate</h3>
+               <div class="price-and-cart2">
+        <p>140 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Hot Chocolate', 140)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="hot chocolate With marshmallows.jpeg" class="food-img" alt="hot chocolate With marshmallows">
+            </div>
+        <div class="card-body">
+        <h3>Hot Chocolate With Marshmallows</h3>
+               <div class="price-and-cart2">
+        <p>165 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Hot Chocolate With Marshmallows', 165)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Oreo-flavored milkshakes.jpeg" class="food-img" alt="Oreo-flavored milkshakes">
+            </div>
+        <div class="card-body">
+        <h3>Oreo-Flavored Milkshakes</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Oreo-Flavored Milkshakes', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="iced caramel macchiato.jpeg" class="food-img" alt="iced caramel macchiato">
+            </div>
+        <div class="card-body">
+        <h3>Iced Caramel Macchiato</h3>
+               <div class="price-and-cart2">
+        <p>165 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Iced Caramel Macchiato', 165)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="cold chocolate With marshmallows.jpeg" class="food-img" alt="cold chocolate With marshmallows">
+            </div>
+        <div class="card-body">
+        <h3>Cold Chocolate With Marshmallows</h3>
+               <div class="price-and-cart2">
+        <p>175 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Cold Chocolate With Marshmallows', 175)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="mint chocolate milkshake.jpeg" class="food-img" alt="mint chocolate milkshake">
+            </div>
+        <div class="card-body">
+        <h3>Mint Chocolate Milkshake</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Mint Chocolate Milkshake', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="Oreo chocolate milkshakes.jpeg" class="food-img" alt="Oreo chocolate milkshakes">
+            </div>
+        <div class="card-body">
+        <h3>Oreo Chocolate Milkshakes</h3>
+               <div class="price-and-cart2">
+        <p>205 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Oreo Chocolate Milkshakes', 205)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate caramel milkshakes.jpeg" class="food-img" alt="chocolate caramel milkshakes">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Caramel Milkshakes</h3>
+               <div class="price-and-cart2">
+        <p>205 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Caramel Milkshakes', 205)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Peanut Butter Frappuccinos.jpeg" class="food-img" alt="Peanut Butter Frappuccinos">
+            </div>
+        <div class="card-body">
+        <h3>Peanut Butter Frappuccinos</h3>
+               <div class="price-and-cart2">
+        <p>210 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Peanut Butter Frappuccinos', 210)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+              <div class="card">
+            <div class="card-top">
+        <img src="Strawberry Milkshake.jpeg" class="food-img" alt="Strawberry Milkshake">
+            </div>
+        <div class="card-body">
+        <h3>Strawberry Milkshake</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Strawberry Milkshake', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Matcha Frappe.jpeg" class="food-img" alt="Matcha Frappe">
+            </div>
+        <div class="card-body">
+        <h3>Matcha Frappe</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Matcha Frappe', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                    <div class="card">
+            <div class="card-top">
+        <img src="Vanilla Frappe.jpeg" class="food-img" alt="Vanilla Frappe">
+            </div>
+        <div class="card-body">
+        <h3>Vanilla Frappe</h3>
+               <div class="price-and-cart2">
+        <p>170 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Vanilla Frappe', 170)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Coconut Frappe.jpeg" class="food-img" alt="Coconut Frappe">
+            </div>
+        <div class="card-body">
+        <h3>Coconut Frappe</h3>
+               <div class="price-and-cart2">
+        <p>185 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Coconut Frappe', 185)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                                                            </div>
+        </div>
+                              </div>
+        </section>
+        <section id="Ice-Cream-Home" class="IceCream">
+        <img src="Ice Cream.jpeg" alt="Ice Cream Home">
+          <div class="Ice-Cream-Home-text">
+          <h1>RN Ice-Cream</h1>
+          <p>We specialize in serving fresh Blueberry & Vanilla Swirl Ice Cream Parfait, and we use original recipes
+          and carefully selected ingrediants to provide a uniqe experience for every visitor.</p>
+          <button onclick="scrollToIceCreamMenu()">Order Now</button>
+          </div>
+        </section>
+        <section id="cards" class="cards-container">
+            <div class="IceCreamMenu" id="IceCreamMenu">
+        <h5>Our Menu</h5>  
+                                  <div class="Burger-Price">
+        <div class="menu-container">
+                 <div class="card">
+            <div class="card-top">
+        <img src="Oreo ice cream.jpeg" class="food-img" alt="Oreo ice cream">
+            </div>
+        <div class="card-body">
+        <h3>Oreo Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>95 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Oreo Ice Cream', 95 )"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate ice cream.jpeg" class="food-img" alt="chocolate ice cream">
+            </div>
+        <div class="card-body">
+        <h3>chocolate Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>100 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('chocolate Ice Cream', 100)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="blueberry ice cream.jpeg" class="food-img" alt="blueberry ice cream">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>110 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blueberry Ice Cream', 110)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="Blue Moon ice cream.jpeg" class="food-img" alt="Blue Moon ice cream">
+            </div>
+        <div class="card-body">
+        <h3>Blue Moon Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>115 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blue Moon Ice Cream', 115)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+               <div class="card">
+            <div class="card-top">
+        <img src="pistachio gelato.jpeg" class="food-img" alt="pistachio gelato">
+            </div>
+        <div class="card-body">
+        <h3>Pistachio Gelato Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>165 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Pistachio Gelato Ice Cream', 165)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="mango ice cream sundae.jpeg" class="food-img" alt="mango ice cream sundae">
+            </div>
+        <div class="card-body">
+        <h3>Mango Ice Cream Sundae</h3>
+               <div class="price-and-cart2">
+        <p>150 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Mango Ice Cream Sundae', 150)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate ice cream sundae.jpeg" class="food-img" alt="chocolate ice cream sundae">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Ice Cream Sundae</h3>
+               <div class="price-and-cart2">
+        <p>155 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Ice Cream Sundae', 155)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+            <div class="card">
+            <div class="card-top">
+        <img src="Ferrero Rocher fantasy trifle.jpeg" class="food-img" alt="Ferrero Rocher fantasy trifle">
+            </div>
+        <div class="card-body">
+        <h3>Ferrero Rocher Fantasy Trifle</h3>
+               <div class="price-and-cart2">
+        <p>220 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Ferrero Rocher Fantasy Trifle', 220)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate mousse topped with a scoop of vanilla ice cream.jpeg" class="food-img" alt="chocolate mousse topped with a scoop of vanilla ice cream">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Mousse Topped With A Scoop Of Vanilla Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>180 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Mousse Topped With A Scoop Of Vanilla Ice Cream', 180)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="chocolate sauce and colorful sprinkles waffle.jpeg" class="food-img" alt="chocolate sauce and colorful sprinkles waffle">
+            </div>
+        <div class="card-body">
+        <h3>Chocolate Sauce and Colorful Sprinkles Waffle</h3>
+               <div class="price-and-cart2">
+        <p>195 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Chocolate Sauce and Colorful Sprinkles Waffle', 195)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Snickers and Reese's Cookie Dough Ice Cream Extravaganza.jpeg" class="food-img" alt="Snickers and Reese's Cookie Dough Ice Cream Extravaganza">
+            </div>
+        <div class="card-body">
+        <h3>Snickers and Reese's Cookie Dough Ice Cream Extravaganza</h3>
+               <div class="price-and-cart2">
+        <p>245 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Snickers Ice Cream Extravaganza', 245)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="mint chocolate chip ice cream cone.jpeg" class="food-img" alt="mint chocolate chip ice cream cone">
+            </div>
+        <div class="card-body">
+        <h3>Mint Chocolate Chip Ice Cream Cone With Chocolate Sauce</h3>
+               <div class="price-and-cart2">
+        <p>135 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Mint Chocolate Chip Ice Cream Cone With Chocolate Sauce', 135)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                        <div class="card">
+            <div class="card-top">
+        <img src="gourmet caramel swirl ice cream.jpeg" class="food-img" alt="gourmet caramel swirl ice cream">
+            </div>
+        <div class="card-body">
+        <h3>Gourmet Caramel Swirl Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>130 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Gourmet Caramel Swirl Ice Cream', 130 )"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="decadent vanilla ice cream cone.jpeg" class="food-img" alt="decadent vanilla ice cream cone">
+            </div>
+        <div class="card-body">
+        <h3>Decadent Vanilla Ice Cream Cone</h3>
+               <div class="price-and-cart2">
+        <p>120 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Decadent Vanilla Ice Cream Cone', 120)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div> 
+                    <div class="card">
+            <div class="card-top">
+        <img src="Dragonfruit Strawberry Ice Cream.jpeg" class="food-img" alt="Dragonfruit Strawberry Ice Cream">
+            </div>
+        <div class="card-body">
+        <h3>Dragonfruit Strawberry Ice Cream</h3>
+               <div class="price-and-cart2">
+        <p>145 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Dragonfruit Strawberry Ice Cream', 145)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                <div class="card">
+            <div class="card-top">
+        <img src="Blueberry & Vanilla Swirl Ice Cream Parfait.jpeg" class="food-img" alt="Blueberry & Vanilla Swirl Ice Cream Parfait">
+            </div>
+        <div class="card-body">
+        <h3>Blueberry & Vanilla Swirl Ice Cream Parfait</h3>
+               <div class="price-and-cart2">
+        <p>175 L.E</p>
+        <div class="card-footer">
+        <button class="cart-btn" onclick="addToCart('Blueberry & Vanilla Swirl Ice Cream Parfait', 175)"><i class="fas fa-shopping-cart"></i></button>
+               </div>
+        </div>
+        </div>
+        </div>
+                                                            </div>
+        </div>
+                                </div>
+        </section>
+<section class="about-section" id="about">
+    <div class="About">
+      <img src="images-about.jpeg" alt="About Our Restaurant">
+    </div>
+  <div class="about-content">
+    <h1 class="h1About">About Us</h1>
+    <p class="pAbout">At RN Restaurant, we believe that great food creates unforgettable moments.
+         Our passion is to bring people together through exceptional flavors, fresh ingredients, and recipes crafted with care.
+         From handcrafted burgers and authentic pizzas to crispy fried chicken, delicious sandwiches, flavorful tacos, indulgent desserts,
+         and refreshing beverages, every item on our menu is prepared to deliver the perfect balance of quality and taste.</p>
+  </div>
+ <div class="about-content2">
+    <h1 class="h1about">Another</h1>
+    <p class="pabout">We are committed to using premium ingredients, maintaining the highest standards of freshness,
+         and providing outstanding service in a warm and welcoming atmosphere. Whether you're dining with family, meeting friends,
+         or simply enjoying your favorite meal, RN Restaurant is dedicated to making every visit a memorable experience.<br>
+         Join us and discover a place where passion for food, quality, and hospitality come together in every bite. Order Now</p>
+ </div>
+  </div>
+</section>
+        </div>
+        <section id="BookATable">
+        <div class="BookATable">
+        <h4>Book A Table</h4>
+        <div class="input-group">
+        <input type="text" id="name" required>
+        <label for="name">Enter Name</label>
+        </div>
+        <div class="input-group">
+        <input type="number" id="Phone Number" required>
+        <label for="Phone Number">Enter phone number</label>
+        </div>
+        <div class="input-group">
+        <input type="email" id="Email" required>
+        <label for="Email">Enter Email</label>
+        </div>
+        <div class="input-group">
+        <input type="number" id="Persons" required>
+        <label for="Persons">Enter Persons</label> 
+        </div>
+        <button type="button" class="btn" onclick="handleBooking(event)">Book Now</button>
+        <a href="https://www.goggle.com">Location</a>
+        </div> 
+        </section>
+        <div id="userModal" class="modal">
+            <div class="modal-content">
+                <span class="close-btn" onclick="closeUserModal()">&times;</span>
+                <h3>User Information</h3>
+                <hr>
+                <div class="user-info-fields">
+                    <p><strong>Name:</strong>RN User</p>
+                    <p><strong>Phone:</strong>+20</p>
+                    <p><strong>Address:</strong>Cairo, Egypt</p>
+                </div>
+            </div>
+        </div>
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span class="close-btn" onclick="closeCartModal()">&times;</span>
+    <h3><i class="fas fa-shopping-cart"></i> Shopping Cart</h3>
+    <hr>
+    
+    <div id="cart-items-container">
+      <p id="empty-cart-msg" style="text-align: center; color: white;">Your cart is empty!</p>
+    </div>
+    
+    <hr>
+    
+    <div style="display: flex; justify-content: space-between; font-weight: bold; font-size: 18px; margin-top: 10px; color: white;">
+      <span>Total:</span>
+      <span id="cart-total">0 L.E</span>
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+<section class="reviews-section">
+    <h2 class="section-title">Customer <span class="highlight">Review</span></h2>
+
+    <div class="reviews-container">
+
+        <div class="review-card">
+            <div class="avatar">
+                <img src="user1.jpeg" alt="Farid">
+            </div>
+            <h3>Farid</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+             <i class="fa-solid fa-star"></i>
+            </div>
+            <p>Fresh ingredients, fast delivery, and amazing flavors. I'll definitely order again!</p>
+        </div>
+
+        <div class="review-card">
+            <div class="avatar">
+                <img src="user2.jpeg" alt="Sarah">
+            </div>
+            <h3>Sarah</h3>
+            <div class="stars">
+             <i class="fa-solid fa-star"></i>
+             <i class="fa-solid fa-star"></i>
+             <i class="fa-solid fa-star"></i>
+             <i class="fa-solid fa-star"></i>
+             <i class="fa-solid fa-star"></i>
+            </div>
+            <p>Everything was perfect! The staff was friendly, and the meals were served hot and fresh.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="avatar">
+                <img src="user3.jpeg" alt="Ahmed">
+            </div>
+            <h3>Ahmed</h3>
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p>One of the best restaurants I've ever visited. Great atmosphere and excellent quality.</p>
+        </div>
+
+        <div class="review-card">
+            <div class="avatar">
+                <img src="user4.jpeg" alt="Layla">
+            </div>
+            <h3>Layla</h3>
+        <div class="stars">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+            <p>The menu has a great variety of dishes, and every meal tastes fantastic. Highly recommended!</p>
+        </div>
+
+    </div>
+</section>
+        <script src="script.js"></script>
+    </body>
+</html>

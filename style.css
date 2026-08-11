@@ -1,0 +1,2258 @@
+h1{
+    color: white;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 100px;
+}
+.Pizza{
+    color: #FFA500;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    font-size: clamp(40px, 6vw, 90px);
+    font-weight: bold;
+    margin-bottom: 30px;
+    margin-top: 70px;
+}
+h2{
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: clamp(24px, 3vw, 40px);
+    text-align: center;
+}
+h3{
+    color: white;
+    font-weight: bold;
+    font-size: clamp(14px, 1.5vw, 20px);
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 15px;
+    margin-top: 10px;
+}
+html,
+body{
+    margin: 0;
+    padding: 0;
+}
+#Home {
+    margin-top: -60px !important;
+    padding-top: 0 !important;
+    border-top: none !important;
+}
+html{
+    scroll-behavior: smooth;
+}
+.view-menu-btn{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.view-menu-btn:hover{
+    transform: scale(1.05);
+}
+.menu-container p{
+    color: white;
+    text-align: left;
+}
+#Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#Home img{
+    width: 100%;
+    display: block;
+}
+.Home-text{
+    position: absolute;
+    top: 8%;
+    right: 5%;
+    color: white;
+    width: 32%;
+    max-width: 400px;
+}
+.Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: clamp(28px, 4vw, 55px);
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 70px;
+}
+.Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: clamp(12px, 1.5vw, 20px);
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+    font-size: clamp(12px, 1.2vw, 20px);
+    font-weight: bold;
+    margin-bottom: clamp(20px, 3vw, 50px);
+}
+
+.list{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    list-style-position: inside;
+    gap: clamp(8px, 1.5vw, 15px) clamp(10px, 2vw, 30px);
+    padding: 0;
+    width: 100%;
+}
+
+.list li{
+    white-space: nowrap;
+}
+.Home-text button{
+    display: block;
+    margin-left: auto;
+}
+.banner{
+    position: relative;
+    margin-top: 40px;
+    border-radius: 16px;
+    overflow: hidden;
+}
+.banner img{
+    width: 100%;
+    display: block;
+}
+#banner-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    max-width: 400px;
+}
+#banner-text h1{
+    margin-bottom: 50px;
+    margin-top: 50px;
+}
+#banner-text p{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: white;
+}
+.navbar{
+    background-color: black;
+    padding: 0.5rem 1%;
+    border-radius: 12px;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    z-index: 9999 !important;
+}
+.nav-links{
+    display: flex;
+    gap: clamp(8px, 1.5vw, 20px);
+}
+.nav-links a{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(12px, 1.2vw, 16px);
+}
+.nav-links a:hover{
+    color: #FFA500;
+}
+.navbar h2{
+    color: white;
+    font-size: clamp(22px, 2.5vw, 40px);
+    margin: 0;
+}
+.nav-right{
+    display: flex;
+    align-items: center;
+    gap: clamp(7px, 1.5vw, 20px);
+}
+.nav-icon{
+    color: white;
+    font-size: clamp(13px, 1.3vw, 16px);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+.nav-icon:hover{
+    color: #ffbe33;
+}
+.order-btn{
+    background-color: #e0a92a;
+    color: white;
+    padding: clamp(6px, 0.7vw, 10px) clamp(12px, 1.5vw, 25px);
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(11px, 1vw, 16px);
+    transition: background 0.3s;
+}
+.order-btn:hover{
+    background-color: #ffbe33;
+    color: white;
+}
+#Home-background-color{
+    background-color: black;
+}
+p{
+    color: black;
+    font-weight: bold;
+}
+#Burger-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#Burger-Home img{
+    width: 100%;
+    display: block;
+}
+.Burger-Home-text{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+    max-width: 400px;
+}
+.Burger-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 45px;
+    margin-top: 100px;
+}
+.Burger-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Fried-Chicken-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden;
+}
+#Fried-Chicken-Home img{
+    width: 100%;
+    display: block;
+}
+.Fried-Chicken-Home-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    max-width: 400px;
+}
+.Fried-Chicken-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 70px;
+    margin-top: 200px;
+}
+.Fried-Chicken-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Main-Meal-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+#Main-Meal-Home img{
+    width: 100%;
+    display: block;
+}
+.Main-Meal-Home-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    max-width: 400px;
+} 
+.Main-Meal-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 90px;
+    margin-top: 200px;
+} 
+.Main-Meal-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Suchi-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+#Suchi-Home img{
+    width: 100%;
+    display: block;
+}
+.Suchi-Home-text{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+    max-width: 400px;
+} 
+.Suchi-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 90px;
+    margin-top: 200px;
+} 
+.Suchi-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#cakes-pastries-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+#cakes-pastries-Home img{
+    width: 100%;
+    display: block;
+}
+.cakes-pastries-Home-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    max-width: 400px;
+} 
+.cakes-pastries-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 90px;
+    margin-top: 200px;
+} 
+.cakes-pastries-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Drinks-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+#Drinks-Home img{
+    width: 100%;
+    display: block;
+}
+.Drinks-Home-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    max-width: 400px;
+} 
+.Drinks-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 70px;
+    margin-top: 200px;
+} 
+.Drinks-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Coffee-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+#Coffee-Home img{
+    width: 100%;
+    display: block;
+}
+.Coffee-Home-text{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+    max-width: 400px;
+} 
+.Coffee-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 78px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 90px;
+    margin-top: 200px;
+} 
+.Coffee-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#Ice-Cream-Home{
+    position: relative;
+    border-radius: 16px;
+    overflow: hidden; 
+}
+#Ice-Cream-Home img{
+    width: 100%;
+    display: block;
+}
+.Ice-Cream-Home-text{
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    color: white;
+    max-width: 400px;
+} 
+.Ice-Cream-Home-text h1{
+    color: #FFA500;
+    font-weight: bold;
+    font-size: 80px;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 70px;
+    margin-top: 200px;
+} 
+.Ice-Cream-Home-text p{
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.price-and-cart2{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: -18px;
+}
+#about{
+    position: relative;
+    margin-top: 40px;
+    border-radius: 16px;
+    border: 2px solid #FFA500;
+    overflow: hidden;
+}
+#about img{
+    width: 95%;
+    display: block;
+}
+.about-content{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    color: white;
+    max-width: 400px;
+    text-align: left;
+}
+.about-content2{
+    position: absolute;
+    top: 550px;
+    right: 40px;
+    color: white;
+    max-width: 400px;
+    text-align: left;
+}
+.h1About{
+    color: #FFA500;
+    font-weight: bold;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    font-size: 85px;
+    margin-bottom: 60px;
+    margin-top: 30px;
+}
+.pAbout{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+.h1about{
+    color: #FFA500;
+    font-weight: bold;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    font-size: 35px;
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+.pabout{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 12px;
+    margin-left: 100px;
+    width: 50%;
+}
+/* 💻 1. تنسيق الكلام للشاشات الكبيرة (الوضع الطبيعي بتاعك) */
+.about-content h1, 
+.about-content2 h1 {
+  margin-bottom: 15px;
+  color: #FFA500;
+}
+
+.about-content p, 
+.about-content2 p {
+  word-wrap: break-word; /* بيمنع خروج الكلام بره الإطار */
+}
+
+button{
+    color: white;
+    background-color: #cc961e;
+    padding: 12px 20px;
+    border-radius: 30px;
+    border: 1px solid #111827;
+    width: 150px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: bold;
+}
+button:hover{
+    background-color: #FFA500;
+}
+a{
+    color: #111827;
+    text-decoration: none;
+}
+a:hover{
+    color: #1d4ed8;
+}
+.banner p{
+    font-size: 20px;
+    margin-top: 40px;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+h4{
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+h5{
+    color: #FFA500;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    font-size: 55px;
+    text-align: center;
+    font-weight: bolder;
+    font-family: Arial, Helvetica, sans-serif;
+}
+input{
+    display: block;
+    margin-bottom: 16px;
+    margin-top: 20px;
+}
+input:focus{
+    outline: none;
+    border-color: #1d4ed8;
+    background-color: #eef4ff;
+}
+.input-group{
+    position: relative;
+    width: 70%;
+}
+.input-group input{
+    width: 100%;
+    padding: 14px 10px;
+    font-size: 16px;
+    border: 1px solid #068fff;
+    outline: none;
+    border-radius: 4px;
+}
+.input-group label{
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    color: #777;
+    font-size: 16px;
+    pointer-events: none;
+    transition: 0.3s ease;
+    background-color: white;
+    padding: 0 5px;
+}
+.input-group input:focus + label,
+.input-group input:valid + label {
+    top: -1px;
+    font-size: 14px;
+}
+.input-group{
+    margin-left: 12px;
+}
+.banner button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.banner button:hover{
+    transform: scale(1.05);
+}
+.Burger button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Burger button:hover{
+    transform: scale(1.05);
+}
+.FriedChicken button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.FriedChicken button:hover{
+    transform: scale(1.05);
+}
+.Pasta button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Pasta button:hover{
+    transform: scale(1.05);
+}
+.Suchi button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Suchi button:hover{
+    transform: scale(1.05);
+}
+.Cakes button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Cakes button:hover{
+    transform: scale(1.05);
+}
+.Drinks button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Drinks button:hover{
+    transform: scale(1.05);
+}
+.Coffee button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.Coffee button:hover{
+    transform: scale(1.05);
+}
+.IceCream button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.IceCream button:hover{
+    transform: scale(1.05);
+}
+.BookATable h4{
+    margin-left: 12px;
+}
+.BookATable button{
+    margin-left: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+}
+.BookATable button:hover{
+    transform: scale(1.05);
+}
+.gallery-container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+.gallery-item{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    background: 8px;
+}
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+    border-radius: 12px;
+}
+.gallery-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    padding: 20px;
+    box-sizing: border-box;
+}
+.gallery-item:hover .gallery-overlay{
+    opacity: 1;
+}
+.gallery-item img:hover img{
+    transform: scale(1.05);
+}
+.gallery-overlay h3{
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-family: sans-serif;
+}
+.gallery-btn{
+    background-color: #ffcc00;
+    color: #000;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background 0.3s;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.gallery-btn:hover{
+    background-color: #e6b800;
+    transform: scale(1.05);
+}
+.gallery-title{
+    color: #FFA500;
+    font-family: 'Dancing Script',cursive,sans-serif;
+}
+.menu-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.cards-container{
+    padding: 40px;
+    text-align: center;
+}
+.cards-container h5{
+    font-size: 2.5rem;
+    font-family: 'Dancing Script',cursive,sans-serif;
+    margin-bottom: 30px;
+}
+.card{
+    background-color: #222831;
+    border-radius: 15px;
+    width: 260px;
+    height: auto;
+    box-shadow: 0 4px 15px rgb(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+}
+.card:hover{
+    transform: translateY(-5px);
+}
+.card-top{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 45px;
+    border-bottom-right-radius: 0px;
+}
+.food-img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+    border-bottom-left-radius: 50px;
+    object-fit: contain;
+    filter: drop-shadow(0 8px 8px rgb(0, 0, 0, 0.15));
+}
+.card-body{
+    padding: 20px;
+    text-align: left;
+}
+.card-body h3{
+    margin: 0 0 10px 0;
+    color: #ffffff;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.card-body p{ 
+    margin: 0 0 20px 0 ;
+    font-size: 0.9rem;
+    color: #d1d1d1 !important;
+    line-height: 1.6;
+}
+.cart-btn{
+    width: 40px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    font-size: 0.95rem;
+}
+.card-footer{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.cart-btn:hover{
+    background-color: #e69d00;
+}
+.cart-btn:active{
+    transform: scale(0.95);
+}
+.price-and-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-top: 15px;
+}
+.price-and-cart{
+    margin: 0;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 10000; 
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: #1b1a1a;
+  color: white;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  text-align: left;
+}
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #FFA500;
+}
+.user-info-fields p {
+  margin: 15px 0;
+  font-size: 16px;
+  color: white;
+}
+#cart-count {
+  background-color: #ff3333;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 11px;
+  position: relative;
+  top: -10px;
+  left: -5px;
+}
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background-color: black;
+  padding: 25px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.close-btn {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close-btn:hover {
+  color: #FFA500;
+}
+#cart-items-container p{
+    color: white;
+}
+.size-select {
+  width: 100%;
+  padding: 8px;
+  margin: 10px 10px;
+  border: 1px solid #222831;
+  border-radius: 5px;
+  background-color: #222831;
+  color: #d1d1d1;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: bold;
+}
+.size-select:focus {
+  outline: none;
+  border-color: white;
+}
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #ff4d4d;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: 0.2s;
+}
+.delete-btn:hover {
+  color: #ff0000;
+  background-color: rgba(255, 77, 77, 0.1);
+}
+.reviews-section {
+    background-color: #0d0d0d;
+    padding: 60px 20px;
+    text-align: center;
+    color: #ffffff;
+}
+.reviews-section .section-title {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+.reviews-section .highlight {
+    color: #ffc107; 
+    border-bottom: 3px solid #ffc107; 
+    padding-bottom: 5px;
+}
+.reviews-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap; 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.review-card {
+    background-color: #141414;
+    border: 1px solid #282828;
+    border-radius: 12px;
+    padding: 30px 20px;
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+.review-card:hover {
+    transform: translateY(-8px);
+    border-color: #ffc107;
+}
+.review-card .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid #ffc107;
+    padding: 3px;
+    margin-bottom: 15px;
+}
+.review-card .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.review-card h3 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+.review-card .stars {
+    color: #ffc107;
+    font-size: 14px;
+    margin-bottom: 12px;
+    display: flex;
+    gap: 4px;
+}
+.review-card p {
+    font-size: 12px;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* تنسيق خانة الكتابة نفسها */
+#searchInput {
+  transition: all 0.3s ease;
+  width: 320px;
+  max-width: 85%;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 2px solid #FFA500;
+  outline: none;
+  background: #ffffff;
+  color: #333;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  
+}
+
+#searchInput:focus {
+  border-color: #FFA500;
+  box-shadow: 0 4px 15px rgba(232, 65, 24, 0.3);
+}
+
+/* تنسيق رسالة "غير موجود" */
+#noResultsMsg {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 10px;
+  width: fit-content;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #FFA500;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 20px auto;
+  padding: 10px;
+}
+/* ضبط مكان شريط البحث ليظهر في المنتصف أسفل الهيدر */
+#searchBox {
+  display: none; /* هينزل يظهر بالـ JS لما تدوسي على أيقونة السيرش */
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 15px 0;
+  background-color: rgba(20, 20, 20, 0.95); /* خلفية غامقة مريحة للأعين */
+  position: relative;
+  z-index: 999; /* عشان يظهر فوق كل العناصر */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  margin: 20px auto;
+}
+
+/* زودنا العرض لـ 450px علشان الوجبة والسعر والأزرار يترصوا مرتاحين */
+.cart-modal-content {
+  width: 90%;
+  max-width: 450px; 
+}
+/* 🔔 تصميم Toast Notification */
+#toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.toast {
+  background-color: #2ed573;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s ease-in-out;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔴 لون الـ Toast في حالة وجود خانة فاضية */
+.toast.error {
+  background-color: #ff4757 !important;
+}
+/* =========================
+   RESPONSIVE - MOBILE
+   ========================= */
+
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        height: 60px;
+        padding: 5px 12px;
+        width: 100%;
+    }
+
+    .navbar h2 {
+        font-size: 22px;
+        margin: 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        font-size: 22px;
+    }
+
+    .nav-right {
+        gap: 6px;
+    }
+
+    .nav-icon {
+        font-size: 13px;
+    }
+
+    .order-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       HOME SECTIONS
+       ========================= */
+
+    #Home,
+    #Burger-Home,
+    #Fried-Chicken-Home,
+    #Main-Meal-Home,
+    #Suchi-Home,
+    #cakes-pastries-Home,
+    #Drinks-Home,
+    #Coffee-Home,
+    #Ice-Cream-Home,
+    .banner {
+
+        position: relative;
+        width: 100%;
+        height: auto;
+        min-height: 0;
+        margin-top: 35px;
+        overflow: hidden;
+    }
+
+
+    /* الصور */
+
+    #Home img,
+    #Burger-Home img,
+    #Fried-Chicken-Home img,
+    #Main-Meal-Home img,
+    #Suchi-Home img,
+    #cakes-pastries-Home img,
+    #Drinks-Home img,
+    #Coffee-Home img,
+    #Ice-Cream-Home img,
+    .banner img {
+
+        width: 100%;
+        height: auto;
+        display: block;
+        object-fit: contain;
+    }
+
+
+    /* =========================
+       TEXT ON IMAGES
+       ========================= */
+
+    .Home-text,
+    .Burger-Home-text,
+    .Fried-Chicken-Home-text,
+    .Main-Meal-Home-text,
+    .Suchi-Home-text,
+    .cakes-pastries-Home-text,
+    .Drinks-Home-text,
+    .Coffee-Home-text,
+    .Ice-Cream-Home-text,
+    #banner-text {
+
+        position: absolute;
+        top: 70%;
+        transform: translateY(-40%);
+        width: 42%;
+        max-width: 250px;
+        padding: 8px;
+        margin: 0;
+        background: rgba(0,0,0,0.25);
+        border-radius: 8px;
+        box-sizing: border-box;
+    }
+
+
+    /* الكلام ناحية اليمين */
+
+    .Home-text,
+    .Burger-Home-text,
+    .Suchi-Home-text,
+    .Coffee-Home-text {
+
+        right: 4%;
+        left: auto;
+        text-align: left;
+    }
+
+
+    /* الكلام ناحية الشمال */
+
+    .Fried-Chicken-Home-text,
+    .Main-Meal-Home-text,
+    .cakes-pastries-Home-text,
+    .Drinks-Home-text,
+    .Ice-Cream-Home-text,
+    #banner-text {
+
+        left: 4%;
+        right: auto;
+        text-align: left;
+    }
+
+
+    /* العناوين */
+
+    .Home-text h1,
+    .Burger-Home-text h1,
+    .Fried-Chicken-Home-text h1,
+    .Main-Meal-Home-text h1,
+    .Suchi-Home-text h1,
+    .cakes-pastries-Home-text h1,
+    .Drinks-Home-text h1,
+    .Coffee-Home-text h1,
+    .Ice-Cream-Home-text h1,
+    #banner-text h1 {
+
+        font-size: clamp(18px, 5vw, 30px);
+
+        margin: 0 0 8px 0;
+
+        line-height: 1.1;
+    }
+
+
+    /* الفقرات */
+
+    .Home-text p,
+    .Burger-Home-text p,
+    .Fried-Chicken-Home-text p,
+    .Main-Meal-Home-text p,
+    .Suchi-Home-text p,
+    .cakes-pastries-Home-text p,
+    .Drinks-Home-text p,
+    .Coffee-Home-text p,
+    .Ice-Cream-Home-text p,
+    #banner-text p {
+
+        font-size: clamp(10px, 2.5vw, 14px);
+
+        line-height: 1.4;
+
+        margin: 0 0 8px 0;
+    }
+
+
+    /* الأزرار */
+
+    .Home-text button,
+    .Burger-Home-text button,
+    .Fried-Chicken-Home-text button,
+    .Main-Meal-Home-text button,
+    .Suchi-Home-text button,
+    .cakes-pastries-Home-text button,
+    .Drinks-Home-text button,
+    .Coffee-Home-text button,
+    .Ice-Cream-Home-text button,
+    #banner-text button {
+
+        width: auto;
+
+        padding: 7px 12px;
+
+        margin: 5px 0 0 0;
+
+        font-size: 11px;
+
+        border-radius: 20px;
+    }
+
+
+    /* نخفي الـ list على الموبايل */
+
+    .list {
+        display: none;
+    }
+
+
+    /* =========================
+       MENU CARDS
+       ========================= */
+
+    .menu-container {
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        max-width: none;
+    }
+
+    .card-body {
+        padding: 12px;
+    }
+
+    .card-body h3 {
+        font-size: 15px;
+    }
+
+    .card-body p {
+        font-size: 11px;
+        line-height: 1.4;
+    }
+
+
+    /* =========================
+       GALLERY
+       ========================= */
+
+    .gallery-container {
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .gallery-item {
+        width: calc(50% - 10px);
+        height: auto;
+        aspect-ratio: 1 / 1;
+    }
+
+
+    /* =========================
+       ABOUT
+       ========================= */
+
+    #about {
+        width: 100%;
+        height: auto;
+    }
+
+    #about img {
+        width: 100%;
+        height: auto;
+    }
+
+    .about-content {
+        position: absolute;
+        transform: scale(0.60);
+        transform-origin: top right;
+        width: 80%;
+        max-width: none;
+        top: 3%;
+        right: 5%;
+        left: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .about-content2{
+        position: absolute;
+        transform: scale(0.24);
+        transform-origin: top right;
+        width: 35%;
+        max-width: none;
+        top: 63%;
+        right: 8%;
+        left: auto;
+        padding: 0;
+        margin: 0;
+    }
+    .about-content h1{
+        font-size: clamp(14px, 4vw, 22px);
+        margin: 0 0 8px 0;
+        white-space: normal;
+    }
+    .about-content2 h1{
+        font-size: clamp(15px, 5vw, 23px);
+        margin: 0 0 8px 0;
+        white-space: normal;
+    }
+    .about-content p{
+        font-size: clamp(9px, 2.3vw, 13px);
+        line-height: 1.4;
+        margin: 0;
+        width: 100%;
+    }
+    .about-content2 p{
+        font-size: clamp(9.7px, 2.5vw, 15px);
+        line-height: 1.4;
+        margin: 0;
+        width: 100%;
+    }
+
+    /* =========================
+       SEARCH
+       ========================= */
+
+    #searchInput {
+        width: 85%;
+        max-width: 320px;
+        font-size: 14px;
+    }
+    #searchBox {
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        padding: 8px 0 !important;
+        margin: 0 !important;
+        background: transparent !important;
+        box-shadow: none !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+        margin-top: -27px !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+    }
+
+    #searchInput {
+        width: 85% !important;
+        max-width: 320px !important;
+        padding: 9px 15px !important;
+        font-size: 14px !important;
+        margin: 0 !important;
+    }
+
+    /* =========================
+       REVIEWS
+       ========================= */
+
+    .reviews-container {
+        gap: 15px;
+    }
+
+    .review-card {
+        width: calc(50% - 10px);
+        padding: 20px 10px;
+    }
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
+    }
+
+    body {
+        padding-top: 70px !important;
+    }
+
+    /* Navbar */
+    .navbar {
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 70px !important;
+        padding: 5px 12px !important;
+        z-index: 9999 !important;
+    }
+
+    .navbar h2 {
+        font-size: 22px !important;
+        margin: 0 !important;
+        order: 1;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .menu-btn {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav-right {
+        gap: 7px;
+        order: 2;
+    }
+
+    .nav-icon {
+        font-size: 14px;
+    }
+
+    .order-btn {
+        padding: 6px 10px;
+        font-size: 11px;
+    }
+
+
+    /* =========================
+       HOME SECTIONS
+       ========================= */
+
+    #Home,
+    #Burger-Home,
+    #Fried-Chicken-Home,
+    #Main-Meal-Home,
+    #Suchi-Home,
+    #cakes-pastries-Home,
+    #Drinks-Home,
+    #Coffee-Home,
+    #Ice-Cream-Home,
+    .banner {
+
+        position: relative !important;
+        width: 100% !important;
+        height: auto !important;
+        min-height: 0 !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        overflow: hidden !important;
+    }
+
+
+    /* الصور */
+    #Home img,
+    #Burger-Home img,
+    #Fried-Chicken-Home img,
+    #Main-Meal-Home img,
+    #Suchi-Home img,
+    #cakes-pastries-Home img,
+    #Drinks-Home img,
+    #Coffee-Home img,
+    #Ice-Cream-Home img,
+    .banner img {
+
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        max-width: 100% !important;
+        object-fit: contain !important;
+    }
+
+
+    /* =========================
+       TEXT ON HOME IMAGES
+       ========================= */
+
+    .Home-text,
+    .Burger-Home-text,
+    .Fried-Chicken-Home-text,
+    .Main-Meal-Home-text,
+    .Suchi-Home-text,
+    .cakes-pastries-Home-text,
+    .Drinks-Home-text,
+    .Coffee-Home-text,
+    .Ice-Cream-Home-text,
+    #banner-text {
+
+        position: absolute !important;
+        top: 50% !important;
+        left: auto !important;
+        right: auto !important;
+
+        width: 48% !important;
+        max-width: 48% !important;
+
+        padding: 8px !important;
+        margin: 0 !important;
+
+        transform: translateY(-50%) !important;
+
+        background: rgba(0, 0, 0, 0.35) !important;
+        border-radius: 8px;
+
+        box-sizing: border-box !important;
+    }
+
+
+    /* الكلام اللي ناحية اليمين */
+    #Home .Home-text,
+    #Burger-Home .Burger-Home-text,
+    #Suchi-Home .Suchi-Home-text,
+    #Coffee-Home .Coffee-Home-text {
+
+        right: 4% !important;
+        text-align: left !important;
+    }
+
+
+    /* الكلام اللي ناحية الشمال */
+    #Fried-Chicken-Home .Fried-Chicken-Home-text,
+    #Main-Meal-Home .Main-Meal-Home-text,
+    #cakes-pastries-Home .cakes-pastries-Home-text,
+    #Drinks-Home .Drinks-Home-text,
+    #Ice-Cream-Home .Ice-Cream-Home-text,
+    .banner #banner-text {
+
+        left: 4% !important;
+        text-align: left !important;
+    }
+
+
+    /* العناوين */
+    .Home-text h1,
+    .Burger-Home-text h1,
+    .Fried-Chicken-Home-text h1,
+    .Main-Meal-Home-text h1,
+    .Suchi-Home-text h1,
+    .cakes-pastries-Home-text h1,
+    .Drinks-Home-text h1,
+    .Coffee-Home-text h1,
+    .Ice-Cream-Home-text h1,
+    #banner-text h1 {
+
+        font-size: 18px !important;
+        line-height: 1.1 !important;
+
+        margin: 0 0 6px 0 !important;
+    }
+
+
+    /* الفقرات */
+    .Home-text p,
+    .Burger-Home-text p,
+    .Fried-Chicken-Home-text p,
+    .Main-Meal-Home-text p,
+    .Suchi-Home-text p,
+    .cakes-pastries-Home-text p,
+    .Drinks-Home-text p,
+    .Coffee-Home-text p,
+    .Ice-Cream-Home-text p,
+    #banner-text p {
+
+        font-size: 10px !important;
+        line-height: 1.3 !important;
+        margin: 0 0 6px 0 !important;
+    }
+
+
+    /* الأزرار */
+    .Home-text button,
+    .Burger-Home-text button,
+    .Fried-Chicken-Home-text button,
+    .Main-Meal-Home-text button,
+    .Suchi-Home-text button,
+    .cakes-pastries-Home-text button,
+    .Drinks-Home-text button,
+    .Coffee-Home-text button,
+    .Ice-Cream-Home-text button,
+    #banner-text button {
+
+        width: auto !important;
+        min-width: 80px !important;
+
+        padding: 5px 9px !important;
+
+        margin: 5px 0 0 0 !important;
+
+        font-size: 10px !important;
+    }
+
+
+    /* إخفاء القائمة في الـ Home */
+    .list {
+        display: none !important;
+    }
+
+
+    /* =========================
+       GALLERY
+       ========================= */
+
+    .gallery-container {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 10px !important;
+        padding: 10px !important;
+    }
+
+    .gallery-item {
+        width: calc(50% - 5px) !important;
+        max-width: none !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+    }
+    .gallery-overlay h3 {
+        font-size: 13px !important;
+        margin-bottom: 8px !important;
+        text-align: center;
+    }
+    .gallery-btn {
+        width: 60%;
+        font-size: 9px !important;
+        padding: 5px 10px !important;
+        border-radius: 4px !important;
+    }
+
+    /* =========================
+       MENU CARDS
+       ========================= */
+
+    .menu-container {
+        width: 100% !important;
+        display: flex !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        padding: 0 10px !important;
+    }
+
+    .card {
+        width: calc(50% - 10px) !important;
+        max-width: none !important;
+    }
+    #Home {
+        margin-top: -50px !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+    }
+    .menu-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 38px;
+    padding: 0;
+    font-size: 22px;
+    order: 3;
+    }
+    .nav-links.show {
+        display: flex !important;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
+        padding: 20px 0;
+        background: #111;
+        z-index: 9998;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    .nav-links.show a {
+        display: block;
+        font-size: 16px;
+        color: white;
+        text-decoration: none;
+    }
+}
+/* =========================================
+   📱 SMALL MOBILE - 480px
+   ========================================= */
+   
+@media (max-width: 480px) {
+
+    body {
+        padding-top: 65px !important;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 65px !important;
+        padding: 5px 8px !important;
+    }
+
+    .navbar h2 {
+        font-size: 19px !important;
+    }
+
+    .nav-right {
+        gap: 5px !important;
+    }
+
+    .nav-icon {
+        font-size: 12px !important;
+    }
+
+    .order-btn {
+        padding: 5px 8px !important;
+        font-size: 9px !important;
+    }
+
+    .menu-btn {
+        width: 35px !important;
+        height: 35px !important;
+        font-size: 20px !important;
+    }
+
+
+    /* Home images */
+    #Home img,
+    #Burger-Home img,
+    #Fried-Chicken-Home img,
+    #Main-Meal-Home img,
+    #Suchi-Home img,
+    #cakes-pastries-Home img,
+    #Drinks-Home img,
+    #Coffee-Home img,
+    #Ice-Cream-Home img,
+    .banner img {
+
+        width: 100% !important;
+        height: auto !important;
+    }
+
+
+    /* Home text */
+    .Home-text,
+    .Burger-Home-text,
+    .Fried-Chicken-Home-text,
+    .Main-Meal-Home-text,
+    .Suchi-Home-text,
+    .cakes-pastries-Home-text,
+    .Drinks-Home-text,
+    .Coffee-Home-text,
+    .Ice-Cream-Home-text,
+    #banner-text {
+
+        width: 48% !important;
+        max-width: 48% !important;
+        padding: 6px !important;
+    }
+
+
+    /* Home titles */
+    .Home-text h1,
+    .Burger-Home-text h1,
+    .Fried-Chicken-Home-text h1,
+    .Main-Meal-Home-text h1,
+    .Suchi-Home-text h1,
+    .cakes-pastries-Home-text h1,
+    .Drinks-Home-text h1,
+    .Coffee-Home-text h1,
+    .Ice-Cream-Home-text h1,
+    #banner-text h1 {
+
+        font-size: 15px !important;
+        margin-bottom: 4px !important;
+    }
+
+
+    /* Home paragraphs */
+    .Home-text p,
+    .Burger-Home-text p,
+    .Fried-Chicken-Home-text p,
+    .Main-Meal-Home-text p,
+    .Suchi-Home-text p,
+    .cakes-pastries-Home-text p,
+    .Drinks-Home-text p,
+    .Coffee-Home-text p,
+    .Ice-Cream-Home-text p,
+    #banner-text p {
+
+        font-size: 8px !important;
+        line-height: 1.25 !important;
+        margin-bottom: 4px !important;
+    }
+
+
+    /* Home buttons */
+    .Home-text button,
+    .Burger-Home-text button,
+    .Fried-Chicken-Home-text button,
+    .Main-Meal-Home-text button,
+    .Suchi-Home-text button,
+    .cakes-pastries-Home-text button,
+    .Drinks-Home-text button,
+    .Coffee-Home-text button,
+    .Ice-Cream-Home-text button,
+    #banner-text button {
+
+        min-width: 65px !important;
+        padding: 4px 7px !important;
+        font-size: 8px !important;
+        margin-top: 3px !important;
+    }
+
+
+    /* Gallery */
+    .gallery-container {
+        gap: 7px !important;
+        padding: 7px !important;
+    }
+
+    .gallery-item {
+        width: calc(50% - 4px) !important;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 13px !important;
+        margin-bottom: 6px !important;
+    }
+
+    .gallery-btn {
+        font-size: 8px !important;
+        padding: 5px 9px !important;
+    }
+
+
+    /* Menu cards */
+    .menu-container {
+        gap: 10px !important;
+        padding: 0 7px !important;
+    }
+
+    .card {
+        width: calc(50% - 7px) !important;
+    }
+
+    .card-body {
+        padding: 10px !important;
+    }
+
+    .card-body h3 {
+        font-size: 14px !important;
+    }
+
+    .card-body p {
+        font-size: 10px !important;
+    }
+}
+
+
+/* =========================================
+   📱 TABLET / MEDIUM - 769px إلى 1024px
+   ========================================= */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    body {
+        padding-top: 75px !important;
+    }
+
+    /* Navbar */
+    .navbar {
+        height: 75px !important;
+        padding: 8px 15px !important;
+    }
+
+    .navbar h2 {
+        font-size: 27px !important;
+    }
+
+    .nav-links {
+        gap: 12px !important;
+    }
+
+    .nav-links a {
+        font-size: 14px !important;
+    }
+
+    .nav-right {
+        gap: 10px !important;
+    }
+
+    .nav-icon {
+        font-size: 14px !important;
+    }
+
+    .order-btn {
+        padding: 8px 15px !important;
+        font-size: 12px !important;
+    }
+
+
+    /* Home sections */
+    #Home,
+    #Burger-Home,
+    #Fried-Chicken-Home,
+    #Main-Meal-Home,
+    #Suchi-Home,
+    #cakes-pastries-Home,
+    #Drinks-Home,
+    #Coffee-Home,
+    #Ice-Cream-Home,
+    .banner {
+
+        width: 100% !important;
+        height: auto !important;
+        overflow: hidden !important;
+    }
+
+
+    /* Home images */
+    #Home img,
+    #Burger-Home img,
+    #Fried-Chicken-Home img,
+    #Main-Meal-Home img,
+    #Suchi-Home img,
+    #cakes-pastries-Home img,
+    #Drinks-Home img,
+    #Coffee-Home img,
+    #Ice-Cream-Home img,
+    .banner img {
+
+        width: 100% !important;
+        height: auto !important;
+        object-fit: contain !important;
+    }
+
+
+    /* Home text */
+    .Home-text,
+    .Burger-Home-text,
+    .Fried-Chicken-Home-text,
+    .Main-Meal-Home-text,
+    .Suchi-Home-text,
+    .cakes-pastries-Home-text,
+    .Drinks-Home-text,
+    .Coffee-Home-text,
+    .Ice-Cream-Home-text,
+    #banner-text {
+
+        width: 40% !important;
+        max-width: 400px !important;
+        padding: 15px !important;
+    }
+
+
+    /* Titles */
+    .Home-text h1,
+    .Burger-Home-text h1,
+    .Fried-Chicken-Home-text h1,
+    .Main-Meal-Home-text h1,
+    .Suchi-Home-text h1,
+    .cakes-pastries-Home-text h1,
+    .Drinks-Home-text h1,
+    .Coffee-Home-text h1,
+    .Ice-Cream-Home-text h1,
+    #banner-text h1 {
+
+        font-size: 32px !important;
+        margin-bottom: 15px !important;
+    }
+
+
+    /* Paragraphs */
+    .Home-text p,
+    .Burger-Home-text p,
+    .Fried-Chicken-Home-text p,
+    .Main-Meal-Home-text p,
+    .Suchi-Home-text p,
+    .cakes-pastries-Home-text p,
+    .Drinks-Home-text p,
+    .Coffee-Home-text p,
+    .Ice-Cream-Home-text p,
+    #banner-text p {
+
+        font-size: 14px !important;
+        line-height: 1.4 !important;
+        margin-bottom: 15px !important;
+    }
+
+
+    /* Buttons */
+    .Home-text button,
+    .Burger-Home-text button,
+    .Fried-Chicken-Home-text button,
+    .Main-Meal-Home-text button,
+    .Suchi-Home-text button,
+    .cakes-pastries-Home-text button,
+    .Drinks-Home-text button,
+    .Coffee-Home-text button,
+    .Ice-Cream-Home-text button,
+    #banner-text button {
+
+        width: auto !important;
+        min-width: 100px !important;
+        padding: 8px 15px !important;
+        font-size: 13px !important;
+    }
+
+
+    /* Gallery */
+    .gallery-container {
+        gap: 15px !important;
+        padding: 15px !important;
+    }
+
+    .gallery-item {
+        width: calc(50% - 8px) !important;
+        height: auto !important;
+        aspect-ratio: 1 / 1 !important;
+    }
+
+    .gallery-overlay h3 {
+        font-size: 20px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .gallery-btn {
+        font-size: 11px !important;
+        padding: 7px 14px !important;
+    }
+
+
+    /* Menu */
+    .menu-container {
+        gap: 20px !important;
+    }
+
+    .card {
+        width: 280px !important;
+    }
+    #searchBox{
+        margin-top: -40px !important;
+        padding-top: 0 !important;
+        border-top: none !important;
+    }
+}
+/* ============================= */
+/*       MOBILE CARDS 768px      */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    .menu-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 15px;
+        padding: 15px;
+        align-items: start;
+    }
+
+    .card {
+        width: 100%;
+        height: 285px;
+        min-height: 285px;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    .card-top {
+        width: 100%;
+        height: 105px;
+        min-height: 105px;
+        flex-shrink: 0;
+        overflow: hidden;
+    }
+
+    .food-img {
+        width: 100%;
+        height: 105px;
+        object-fit: cover;
+        display: block;
+    }
+
+    .card-body {
+        height: 180px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-body h3 {
+        font-size: 14px;
+        line-height: 1.25;
+        margin: 0 0 6px 0;
+        min-height: 35px;
+    }
+
+    .card-body p {
+        font-size: 10px;
+        line-height: 1.3;
+        margin: 0 0 8px 0;
+    }
+
+    .price-and-cart {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 5px;
+        width: 100%;
+    }
+
+}
+.menu-btn {
+    display: none;
+}
